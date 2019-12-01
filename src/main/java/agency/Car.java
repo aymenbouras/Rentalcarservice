@@ -3,13 +3,13 @@ package agency;
 
 import static util.TimeProvider.*;
 
-public class Car implements Vehicle{
+public class Car  implements Vehicle{
     private String brand;               //marque de la voiture
     private String model;               //nom du Model de voiture
     private int productionYear;         //année de production
     private int numberOfSeats;          //nombre de siege
 
-    public Car(String brand, String model, int productionYear, int numberOfSeats) {
+    Car(String brand, String model, int productionYear, int numberOfSeats) {
         this.brand = brand;
         this.model = model;
 
@@ -38,12 +38,9 @@ public class Car implements Vehicle{
         return this.productionYear;
     }
 
-    public boolean isNew(){
-    if(currentYearValue() - productionYear <= 5){   //modele recent
-        return true;
-    }else {
-        return false;
-    }
+    boolean isNew(){
+        //modele recent
+        return currentYearValue() - productionYear <= 5;
     }
 
 
