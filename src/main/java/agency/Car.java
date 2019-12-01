@@ -38,18 +38,36 @@ public class Car implements Vehicle{
         return this.productionYear;
     }
 
-    @Override
-    public double dailyRentalPrice() {
-        return 0;
+    public boolean isNew(){
+    if(currentYearValue() - productionYear <= 5){   //modele recent
+        return true;
+    }else {
+        return false;
+    }
     }
 
 
     @Override
+    public double dailyRentalPrice() {
+        if(isNew()){
+            return (40 * numberOfSeats);
+        }else{
+            return (20 * numberOfSeats);
+        }
+
+    }
+    private String printSeat(){
+        if (numberOfSeats == 1){
+            return " seat";
+        }else {
+            return " seats";
+        }
+    }
+
+    @Override
     public String toString() {
-        return "type of vehicle : " + " Car"+ "\n" +
-                "the vehicle brand : " + brand + "\n" +
-                "the model of the vehicle : " + model + "\n" +
-                "the year of manufacture of the vehicle : "+ productionYear + ", " +
-                "with " +  numberOfSeats + " : " + dailyRentalPrice() + " €";
+        return  "Car"+ " " + brand + " " + model +
+                 " "+productionYear +
+                " (" +  numberOfSeats + printSeat() + ")"  + " : " + dailyRentalPrice() + "€";
     }
 }
