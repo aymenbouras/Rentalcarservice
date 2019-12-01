@@ -5,8 +5,8 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
 class TestClient {
-  // TODO : décommenter le code ci-dessous pour tester la classe Client.
-  /*
+
+
 
   private Client arnaud;
 
@@ -27,5 +27,4 @@ class TestClient {
   void testGetYearOfBirth(){
     assertThat(arnaud.getYearOfBirth()).isEqualTo(1981);
   }
-  */
 }

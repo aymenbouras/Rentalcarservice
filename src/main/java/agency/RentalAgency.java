@@ -2,10 +2,15 @@ package agency;
 
 import javax.lang.model.element.UnknownElementException;
 import java.util.List;
+import java.util.Map;
 
-public class RentalAgency {
+public class RentalAgency  {
+    Map<Client, Vehicle> rentedVehicles;            //les associations entre clients et véhicules loués.
+    List<Vehicle> vehicles;                         //la liste des véhicules de l’agence,
 
-    List<Vehicle> vehicles;         //la liste des véhicules de l’agence,
+
+
+
 
     public RentalAgency() {
         this.vehicles = null;
@@ -16,7 +21,7 @@ public class RentalAgency {
     }
 
     public  boolean add(Vehicle vehicle) {
-        if (vehicles.contains(vehicle)) {
+        if (this.vehicles.contains(vehicle)) {
             return false;
         }else
             vehicles.add(vehicle);
@@ -40,4 +45,6 @@ public class RentalAgency {
     public List<Vehicle> getVehicles() {
         return vehicles;
     }
+
+
 }
