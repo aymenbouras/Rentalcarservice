@@ -9,9 +9,10 @@ import java.util.Objects;
 
 import static org.assertj.core.api.Assertions.*;
 
+
 class TestCar {
-  // TODO : décommenter le code ci-dessous pour tester la tâche 2.
-  /*
+
+
 
   Car catalinaCar = new Car(apple, catalina, catalinaYear, catalinaNumberOfSeats);
   Car windows95Car = new Car(microsoft, windows95, windows95Year, windows95NumberOfSeats);
@@ -118,5 +119,5 @@ class TestCar {
     String expectedStringWin = "Car Microsoft Windows95 1995 (1 seat) : 20.0€";
     assertThat(windows95Car).returns(expectedStringWin, Objects::toString);
   }
-  */
+
 }

@@ -14,13 +14,13 @@ public class Car implements Vehicle{
         this.model = model;
 
         this.productionYear = productionYear;
-            if ( productionYear < 1900 && productionYear > currentYearValue())
+            if ( productionYear < 1900 || productionYear > currentYearValue())
                 throw new IllegalArgumentException("the year given in argument : " + productionYear +
-                     " must be greater than 1900 and lower than the current year");
+                        " ,must be greater than 1900 and lower than the current year");
 
         this.numberOfSeats = numberOfSeats;
             if ( numberOfSeats < 1) throw new IllegalArgumentException("the number of seats given in argument : "
-                     + numberOfSeats + "must be greater than 1");
+                     + numberOfSeats + " ,must be greater than 1");
     }
 
     @Override
@@ -45,6 +45,11 @@ public class Car implements Vehicle{
 
     @Override
     public String toString() {
-        return this + brand
+        return "type of vehicle : " + " Car"+ "\n" +
+                "the vehicle brand : " + brand + "\n" +
+                "the model of the vehicle : " + model + "\n" +
+                "the year of manufacture of the vehicle : "+ productionYear + ", " +
+                "with " +  numberOfSeats + " : " + dailyRentalPrice() + " €";
     }
+    public
 }
