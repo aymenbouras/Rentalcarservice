@@ -39,18 +39,18 @@ class TestRentalAgency extends TestCar{
 
 
 
-  // TODO : décommenter le code ci-dessous pour tester la méthode select.
 
-  /*
+
+
   @Test
   void testRemovingNonExistingVehicle(){
     assertThatThrownBy(() -> rentalAgency.remove(catalinaCar))
             .isInstanceOf(UnknownVehicleException.class)
             .hasMessageContaining(catalinaCar.toString());
   }
-  */
 
-  // TODO : décommenter le code ci-dessous pour tester la tâche 6.
+
+
   /*
   @Test
   void testSelect(){

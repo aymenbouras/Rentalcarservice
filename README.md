@@ -1,4 +1,4 @@
-# Agence de voyage
+# Agence de location
 
 ## Description du projet
 
@@ -9,4 +9,4 @@ en fonction de différents critères.
 ## Membres du projet
 
 - BOUTEBA Camil Licence informatique 2 (Groupe 1 )
-- BOURAS Aymen Licence informatique 2 (Groupe 1 )
+
