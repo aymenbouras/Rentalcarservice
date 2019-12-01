@@ -16,12 +16,11 @@ public class RentalAgency {
     }
 
     public  boolean add(Vehicle vehicle) {
-        vehicles.add(vehicle);
-        if (vehicle != RentalAgency(vehicle)) {
+        if (vehicles.contains(vehicle)) {
             return false;
-        }else {
-            return true;
-        }
+        }else
+            vehicles.add(vehicle);
+        return true;
     }
 
 
