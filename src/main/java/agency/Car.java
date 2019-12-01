@@ -1,4 +1,4 @@
-package src.main.java.util.agency;
+package agency;
 
 
 import static util.TimeProvider.*;
@@ -14,13 +14,13 @@ public class Car implements Vehicle{
         this.model = model;
 
         this.productionYear = productionYear;
-            if ( productionYear < 1900 || productionYear > currentYearValue())
-                throw new IllegalArgumentException("the year given in argument : " + productionYear +
-                        " ,must be greater than 1900 and lower than the current year");
+        if ( productionYear < 1900 || productionYear > currentYearValue())
+            throw new IllegalArgumentException("the year given in argument : " + productionYear +
+                    " ,must be greater than 1900 and lower than the current year");
 
         this.numberOfSeats = numberOfSeats;
-            if ( numberOfSeats < 1) throw new IllegalArgumentException("the number of seats given in argument : "
-                     + numberOfSeats + " ,must be greater than 1");
+        if ( numberOfSeats < 1) throw new IllegalArgumentException("the number of seats given in argument : "
+                + numberOfSeats + " ,must be greater than 1");
     }
 
     @Override
@@ -43,6 +43,7 @@ public class Car implements Vehicle{
         return 0;
     }
 
+
     @Override
     public String toString() {
         return "type of vehicle : " + " Car"+ "\n" +
@@ -51,5 +52,4 @@ public class Car implements Vehicle{
                 "the year of manufacture of the vehicle : "+ productionYear + ", " +
                 "with " +  numberOfSeats + " : " + dailyRentalPrice() + " €";
     }
-    public
 }
